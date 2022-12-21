@@ -1,0 +1,22 @@
+{% comment %} <h1>MESSAGES TEST</h1> {% endcomment %}
+{% load addstr %}
+{% if messages %}
+<div class="container">
+    <ul class="messages">
+        {% for message in messages %}
+
+        <article class="message">
+            {% if message.tags %}
+            {% comment %} <div class={{"message-body"|addstr:message.tags}}> {% endcomment %}
+            <div class="{{ message.tags|addstr:" message-body"}}">
+            {%else%}
+            <div class="message-body">
+            {%endif%}
+                {{ message }}
+            </div>
+        </article>
+
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}

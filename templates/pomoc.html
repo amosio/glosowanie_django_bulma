@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% if header %}
+{% block title %}{{header}}{% endblock %}
+{% endif%}
+
+{% block content%}
+
+<div class="section">
+<h1 class="title is-spaced">
+Jak oddac głos 
+</h1>
+</div>
+<div class="section">
+<h3 class="subtitle is-spaced">
+Opis głosowania
+</h3>
+<p>
+Każdy pracownik Urzędu Miasta Tarnowa, posługując się urzędowym emailem oraz hasłem, powinien zalogować się na stronie za pomocą przycisku <strong>Zaloguj sie</strong>znajdującym się w prawym górnym rogu strony. W przypadku problemów z hasłem patrz <a href="#email">Pierwsze logowanie</a>). Po zalogowaniu się należy wybrać z listy odpowiedniego kandydata i kliknąć przycisk <strong>Glosuję na wybranego kandydata</strong>.
+</p>
+</div>
+
+<div class="section">
+<h1 id="email" class="title is-spaced">
+Pierwsze logowanie
+</h1>
+</div>
+<div class="section">
+<h3 class="subtitle is-spaced">
+Podczas pierwszego uruchomienia strony należy:
+</h3>
+<p>
+<ol>
+<li>Kliknąć przycisk <strong>Zaloguj się</strong></li>
+<li>Kliknąć przycisk <strong>NIE POSIADAM/NIE PAMIĘTAM HASŁA</strong></li>
+<li>W pole <strong>Adres email</strong> należy wpisać swój urzędowy adres email a następnie kliknąć przycisk <strong> Wyślij wiadomość resetującą hasło</strong></li>
+<li>Na podany adres email zostanie wysłana wiadomość z instrukcjami co do dalszego postępowania (Tytuł emaila to "Reset hasła dla konta na stronie...", nadawca to "webmaster@localhost.umt.tarnow.pl")</li>
+<li>Przykładowa treść wysłanej wiadomości:</li>
+<pre>
+Otrzymujesz tę wiadomość, gdyż skorzystano z opcji resetu hasła dla Twojego konta na stronie wybory.umt.tarnow.pl.
+
+Aby wprowadzić nowe hasło, proszę przejść na stronę, której adres widnieje poniżej:
+
+http://wybory.umt.tarnow.pl/accounts/reset/MQ/aepotl-723b701253190bddf084c06299bd7951/
+
+Twoja nazwa użytkownika, na wypadek, gdybyś zapomniał(a): nazwa_użytkownika
+
+Dziękujemy za korzystanie naszej strony.
+
+Zespół wybory.umt.tarnow.pl
+</pre>
+<li>Należy kliknąć podany link albo zaznaczyć go i wkleić do przeglądarki internetowej (uwaga! wysłany link może się nieco różnić)</li>
+<li>Po zmianie hasła logujemy się za pomocą pełnego urzędowego adresu email oraz nowo utworzonego hasła</li>
+<li>W przypadku nie otrzymania wiadomości email należy sprawdzić folder ze spamem</li>
+<ol>
+</p>
+</div>
+{% endblock content%}

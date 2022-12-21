@@ -1,0 +1,37 @@
+table, th, td {border: 1px solid black;
+    border-collapse: collapse;}
+    th, td {
+  padding: 0.2em;}
+
+  table.noborder, table.noborder > th, table.noborder > td {border: none;
+    border-collapse: collapse;}
+
+html {
+    /* padding: 0.2em; */
+    background-color: rgb(235, 247, 247);
+}
+.section {
+    padding: 24px;
+}
+ul#control li, ul#control li form {
+    display: inline;
+  }
+
+.success {
+    color: green;
+    font-size: 2em;
+}
+
+.error {
+    color: red;
+}
+
+.is-warning {
+    margin-left: 3em;
+}
+
+.errorlist {
+    padding: 1em;
+    color: darkred;
+    background-color: peachpuff
+}

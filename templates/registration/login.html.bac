@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content%}
+    <div class="section">
+        <p class="title">Logowanie</p>
+    </div>
+
+<form method="post">
+<div class="section">
+  {% csrf_token %}
+  {% comment %} {{ form.as_p }} {% endcomment %}
+    {% for field in form%}
+        <div class="field">
+            <label class="label">
+	{% if 'tkownik' in field.label %}
+	Urzędowy adres email	
+	{% else %}
+	{{field.label }}
+	{% endif %}
+            </label>
+            <div class="control">
+                {{field}}
+            </div>
+        </div>
+    {%endfor%}
+  
+</div>
+<div class="section">
+  <button class="button is-success" type="submit">ZALOGUJ SIĘ</button>
+</div>
+</form>
+
+<div class="section">
+    <a href="{% url 'password_reset'%}"><button class="button is-link is-info">NIE POSIADAM/NIE PAMIĘTAM HASŁA</button></a>
+</div>
+{% comment %} <a href="{% url 'password_reset' %}"><button>NIE PAMIĘTAM HASŁA</button></a> {% endcomment %}
+{% endblock %}
